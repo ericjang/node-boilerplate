@@ -6,6 +6,7 @@ node-boilerplate takes html-boilerplate, express, connect, jade and Socket.IO an
 Forked from Robrighter's repo, with my own custom modifications to include:
 
 - Twitter Bootstrap
+- DevNotes.txt (also added to the gitignore)
 - ... and possibly more features to come (everyauth)
 
 To start a project:

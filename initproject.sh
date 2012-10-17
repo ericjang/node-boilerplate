@@ -30,6 +30,9 @@ cp ./templates/js/bootstrap.min.js ./static/js/bootstrap.min.js
 cp ./templates/css/bootstrap.min.css ./static/css/bootstrap.min.css
 cp ./templates/css/bootstrap-responsive.min.css ./static/css/bootstrap-responsive.min.css
 
+#create DevNotes.txt file
+cat > DevNotes.txt
+
 echo "Setting up the dependencies from NPM..."
 npm install
 
