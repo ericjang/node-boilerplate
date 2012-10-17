@@ -15,7 +15,6 @@ cp ./templates/app/.gitignore ./.gitignore
 cp ./templates/app/config.json ./config.json
 cp ./templates/app/Makefile ./Makefile
 cp ./templates/test/stub.js ./test/stub.js
-#curl https://raw.github.com/h5bp/html5-boilerplate/master/css/main.css > ./static/css/style.css
 
 cp ./templates/views/500.jade ./views/500.jade
 cp ./templates/views/404.jade ./views/404.jade
@@ -31,7 +30,7 @@ cp ./templates/css/bootstrap.min.css ./static/css/bootstrap.min.css
 cp ./templates/css/bootstrap-responsive.min.css ./static/css/bootstrap-responsive.min.css
 
 #create DevNotes.txt file
-cat > DevNotes.txt
+touch DevNotes.txt
 
 echo "Setting up the dependencies from NPM..."
 npm install
