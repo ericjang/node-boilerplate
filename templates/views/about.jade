@@ -1,0 +1,17 @@
+extends layout
+
+block header_menu
+	a.brand(href='/') Project name
+	div.nav-collapse.collapse
+		ul.nav
+			li
+				a(href="/") Home
+			li.active
+				a(href='#') About
+			li
+				a(href='/contact') Contact
+
+block content
+	h1 About
+	p This is the about page!
+

@@ -68,6 +68,28 @@ server.get('/', function(req,res){
   });
 });
 
+server.get('/about', function(req,res){
+  res.render('about.jade', {
+    locals : { 
+              title : 'Your Page Title'
+             ,description: 'Your Page Description'
+             ,author: 'Your Name'
+             ,analyticssiteid: 'XXXXXXX' 
+            }
+  });
+});
+
+server.get('/contact', function(req,res){
+  res.render('contact.jade', {
+    locals : { 
+              title : 'Your Page Title'
+             ,description: 'Your Page Description'
+             ,author: 'Your Name'
+             ,analyticssiteid: 'XXXXXXX' 
+            }
+  });
+});
+
 
 //A Route for Creating a 500 Error (Useful to keep around)
 server.get('/500', function(req, res){

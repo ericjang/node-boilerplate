@@ -15,20 +15,38 @@ html.no-js(lang='en')
     meta(name="description", content=description)
     meta(name="author", content=author)
     meta(name="viewport", content='width=device-width, initial-scale=1')
-    link(rel='stylesheet', href='/css/style.css')
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/bootstrap-responsive.min.css')
+    script(defer, src='/js/bootstrap.min.js')
     //-script(src='js/libs/modernizr-2.0.6.min.js')
   body
     block header
+      div.navbar.navbar-inverse.navbar-fixed-top
+        div.navbar-inner
+          a.btn.btn-navbar(data-toggle='collapse',data-target='.nav-collapse')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          block header_menu
+            a.brand(href='#') Project name
+            div.nav-collapse.collapse
+              ul.nav
+                li.active
+                  a(href="#") Home
+                li
+                  a(href='/about') About
+                li
+                  a(href='/contact') Contact
 
     block content
-
+    
     block footer
       footer
         script(src='//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
         script
           window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\\/script>')
         //-script(defer, src='js/plugins.js')
-        script(defer, src='/js/script.js')
+        block customscripts
         script(defer, src='/socket.io/socket.io.js')
           script
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview'],['_trackPageLoadTime']];
