@@ -42,17 +42,19 @@ html.no-js(lang='en')
     
     block footer
       footer
-        script(src='//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
-        script
-          window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\\/script>')
-        //-script(defer, src='js/plugins.js')
+        script(src='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.2.1/bootstrap.min.js')
+        script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.2/jquery.min.js')
+        script(src='//cdnjs.cloudflare.com/ajax/libs/json2/20110223/json2.js')
+        script(src='//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.2/underscore-min.js')
+        script(src='//cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.2/backbone-min.js')
+        //-custom scripts (i.e application-specific)
         block customscripts
         script(defer, src='/socket.io/socket.io.js')
-          script
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview'],['_trackPageLoadTime']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
+        script
+          var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview'],['_trackPageLoadTime']];
+          (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+          g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+          s.parentNode.insertBefore(g,s)}(document,'script'));
         //if lt IE 7
           script(defer, src='//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js')
           script(defer)
