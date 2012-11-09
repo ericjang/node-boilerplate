@@ -3,7 +3,7 @@
 
 $(document).ready(function() {   
 
-  vvar socket = io.connect();
+  var socket = io.connect();
 
   $('#sender').bind('click', function() {
    socket.emit('message', 'Message Sent on ' + new Date());     
