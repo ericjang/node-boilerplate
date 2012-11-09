@@ -1,27 +1,42 @@
-Node Boilerplate Version 2
+Node Boilerplate
 ==========================
-*Requires Node v0.6.6 (or newer)*
-node-boilerplate takes html-boilerplate, express, connect, jade and Socket.IO and organizes them into a ready to use website project. 
+*Requires Node v0.8.6 (or newer)*
 
-Forked from Robrighter's repo, with my own custom modifications to include:
 
-- Twitter Bootstrap
-- DevNotes.txt (also added to the gitignore)
-- ... and possibly more features to come (everyauth)
-
-To start a project:
+#To start a project:
 		
 		git clone git://github.com/ericjang/node-boilerplate.git mynewproject
 		cd mynewproject
 		./initproject.sh
-This will copy down all of the boilerplate files, organize them appropriately and init a fresh new git repository within which you can build your next big thing.
+		
+#To run the project
 
 
 To run the boilerplate template app:
 
 		node server.js
 
-Go to http://0.0.0.0:8081 and click on the send message link to see socket.io in action.
+Go to http://0.0.0.0:8081 to view your website.
+
+If you prefer to write in coffeescript, the coffee source is included (run this before):
+
+	coffee --watch --compile server.coffee static/js/*.coffee 
+
+#About
+
+This will copy down all of the boilerplate files, organize them appropriately and init a fresh new git repository within which you can build your next big thing.
+
+node-boilerplate takes html-boilerplate, express, connect, jade and Socket.IO and organizes them into a ready to use website project. This is intended for my personal NodeJS projects but anybody is more than welcome to fork a copy and run this.
+
+This is a fork from Robrighter's repo, with my own custom modifications to include:
+
+- Twitter Bootstrap
+- A DevNotes.txt file (also added to the gitignore)
+- process.ENV detection for heroku apps that bind to MongoDB services (or anything, really...)
+- Backbone.js integration
+- All 3rd party JS libraries are imported using Cloudflare CDN (for less server load)
+- A design choice was made not to upgrade to Express 3.x yet, owing to a slightly stiffer API
+- ... more features to come.
 
 
 Additional Features:
@@ -30,6 +45,7 @@ Additional Features:
 2. Adds .gitignore for the node_modules directory
 3. Includes 404 page and associated route
 4. Includes 500 page
+
 
 To add additional modules:
 
